@@ -2,21 +2,19 @@
 # Copyright (C) 2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
-#
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common LineageOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit common RisingOS stuff
+$(call inherit-product, vendor/rising/config/common_full_phone.mk)
 
 # Inherit from larry device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_larry
+PRODUCT_NAME := rising_larry
 PRODUCT_DEVICE := larry
 PRODUCT_BRAND := oneplus
 PRODUCT_MODEL := CPH2467
@@ -30,4 +28,24 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceName=OP5958L1 \
     DeviceProduct=OP5958L1 \
     SystemDevice=OP5958L1 \
-    SystemName=OP5958L1
+    SystemName=OP5958L1 \
+    RisingChipset="Qualcomm Snapdragon 695" \
+    RisingMaintainer="Viaan Thakur"
+
+# Maintainer info
+RISING_MAINTAINER := Viaan Thakur
+
+# UI effects
+TARGET_ENABLE_BLUR := true
+
+# Ship aperture camera
+PRODUCT_NO_CAMERA := false
+
+# Ship Lawnchair launcher
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+
+# ==============================
+#   GMS Build Flags (Enabled)
+# ==============================
+WITH_GMS := true
+TARGET_USES_PICO_GAPPS := true
