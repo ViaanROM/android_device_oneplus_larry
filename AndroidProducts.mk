@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/rising_larry.mk
+    $(LOCAL_DIR)/lineage_larry.mk
 
 COMMON_LUNCH_CHOICES := \
-    rising_larry-user \
-    rising_larry-userdebug \
-    rising_larry-eng
+    lineage_larry-user \
+    lineage_larry-userdebug \
+    lineage_larry-eng
