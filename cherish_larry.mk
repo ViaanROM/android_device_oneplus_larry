@@ -14,7 +14,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := rising_larry
+PRODUCT_NAME := cherish_larry
 PRODUCT_DEVICE := larry
 PRODUCT_BRAND := oneplus
 PRODUCT_MODEL := CPH2467
@@ -29,23 +29,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=OP5958L1 \
     SystemDevice=OP5958L1 \
     SystemName=OP5958L1 \
-    RisingChipset="Qualcomm Snapdragon 695" \
-    RisingMaintainer="Viaan Thakur"
 
-# Maintainer info
-RISING_MAINTAINER := Viaan Thakur
-
-# UI effects
-TARGET_ENABLE_BLUR := true
-
-# Ship aperture camera
-PRODUCT_NO_CAMERA := false
-
-# Ship Lawnchair launcher
-TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
-
-# ==============================
-#   GMS Build Flags (Enabled)
-# ==============================
-WITH_GMS := true
-TARGET_USES_PICO_GAPPS := true
