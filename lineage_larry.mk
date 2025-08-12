@@ -43,9 +43,3 @@ PRODUCT_NO_CAMERA := false
 
 # Ship Lawnchair launcher
 TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
-
-# ==============================
-#   GMS Build Flags (Enabled)
-# ==============================
-WITH_GMS := true
-TARGET_USES_PICO_GAPPS := true
